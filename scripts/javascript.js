@@ -167,7 +167,7 @@ $(document).ready(function(){
 		
 		if(!animationFlags["projects"]){
 			if(scrollTop > ($(".projectTable").offset().top - $("#splash").height())){
-				$(".projectTile").css({"margin-top":"0px", "opacity":1});
+				$(".projectTile").css({"margin-top":"20px", "opacity":1});
 				animationFlags["projects"] = 1;
 			}
 		}

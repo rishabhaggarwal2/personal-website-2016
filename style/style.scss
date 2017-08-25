@@ -163,13 +163,19 @@ section{
 		margin:auto;
 	}
 	h4{
+		text-transform: none;
+		letter-spacing: 0.02em !important;
+		font-weight: 100;
 		@media (max-width: 768px){
 			font-size: 16px;
 		}	
+
+		b {
+			color: inherit;
+		}
 	}
 	h1,h4{
-		margin-top: 30px;
-		margin-bottom: 30px;
+		margin-top: 20px;
 		line-height: 1;
 		@media (max-width: 768px){
 			line-height: 1.5;
@@ -178,6 +184,10 @@ section{
 	}
 	h1{
 		font-size: 3em;
+		margin-bottom: 20px;
+		text-transform: capitalize;
+		letter-spacing: 0.02em;
+		margin-left:-3px;
 		@media (max-width: 768px){
 			font-size: 2em;
 		}	
@@ -254,33 +264,83 @@ section{
 		outline: none !important;
 	}
 	.projectTile{
-		margin-top:40px;
+		margin-top:60px;
+		margin-bottom: 20px;
 		opacity:0;
 		@include transition(2s);
 	}
+	.projectTile:nth-child(1){
+		padding-right: 25px;
+		@include transition-delay(0.2s);
+	}
 	.projectTile:nth-child(2){
+		padding-left: 25px;
 		@include transition-delay(0.2s);
 	}
 	.projectTile:nth-child(3){
+		padding-right: 25px;
 		@include transition-delay(0.4s);
 	}
 	.projectTile:nth-child(4){
+		padding-left: 25px;
 		@include transition-delay(0.6s);
 	}
 	.projectTile:nth-child(5){
+		padding-right: 25px;
 		@include transition-delay(0.8s);
 	}
 	.projectTile:nth-child(6){
+		padding-left: 25px;
+		padding-right: 25px;
 		@include transition-delay(1s);
+	}
+	.projectTile:nth-child(7){
+		padding-left: 25px;
+		@include transition-delay(1.2s);
+	}
+
+	.projectTitles {
+		display: flex;
+		justify-content: space-between;
+
 	}
 	
 	.projectTitle{
 		font-weight: 400;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		margin-top:40px;
+		text-transform: none;
+		letter-spacing: 0.05em;
+		font-weight: 600;
 		color:#000;
+		display: inline-block;
+		font-size: 1.2em;
+		margin-bottom: 0;
 	}
+
+	.projectCategory {
+		display: inline-block;
+		margin-left: auto;
+		text-align: right;
+		font-weight: 100;
+		opacity: 0.5;
+		position: relative;
+		margin-left: 20px;
+		margin-bottom: 0;
+	}
+
+	.projectCategory:before {
+	    content: '';
+	    width: 5px;
+	    height: 5px;
+	    background: #000;
+	    display: block;
+	    border-radius: 50% 50%;
+	    vertical-align: middle;
+	    position: absolute;
+	    left: -12.5px;
+	    top: 50%;
+	    margin-top: -3.5px;
+	}
+
 	.projectImage{
 		width:100%;
 		-webkit-filter: brightness(1);
@@ -289,7 +349,7 @@ section{
 		-ms-filter: brightness(1);
 	}
 	.projectImageDiv{
-		width:80%;
+		width:100%;
 		margin:auto;
 		cursor: pointer;
 		@include bouncy-transition(1s);
@@ -318,15 +378,15 @@ section{
 		filter: brightness(0.2);
 		-moz-filter: brightness(0.2);
 		-ms-filter: brightness(0.2);
-		transform:scale(1.1);
+		transform:scale(1.02);
 
 	}
 	.projectDescription{
-		width:80%;
+		width:100%;
 		margin:auto;
 		color:#444;
-		text-align: center;
-		margin-top:10px;
+		text-align: left;
+		// margin-top:10px;
 		font-size: 14px;
 		line-height: 1.8;
 		// font-family: Plantin Light;
