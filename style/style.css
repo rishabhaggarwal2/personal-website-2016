@@ -76,7 +76,8 @@ b, span.highlight {
   color: #e44e4e; }
 
 span.lightHighlight {
-  color: #f38f8f; }
+  /* color: #f38f8f; */
+  font-weight: bold; }
 
 .mobileOnly {
   display: block; }
@@ -120,7 +121,13 @@ section {
   #splash h4 {
     text-transform: none;
     letter-spacing: 0.02em !important;
+    line-height: 1.45 !important;
+    width: 90%;
     font-weight: 100; }
+    #splash a {
+      color: inherit;
+      text-decoration: underline;
+    }
     @media (max-width: 768px) {
       #splash h4 {
         font-size: 16px; } }
@@ -519,7 +526,7 @@ section {
   -moz-filter: brightness(0);
   -ms-filter: brightness(0);
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   opacity: 0;
   transform: scale(0);
   -webkit-transform: scale(0);
@@ -530,11 +537,19 @@ section {
   -moz-transition: all 1s cubic-bezier(0.42, -0.76, 0.48, 1.64);
   -ms-transition: all 1s cubic-bezier(0.42, -0.76, 0.48, 1.64);
   -o-transition: all 1s cubic-bezier(0.42, -0.76, 0.48, 1.64); }
+  #logoQuilt .company.tiny {
+    width: 10%;
+    height: 30px;
+  }
   @media (max-width: 486px) {
     #logoQuilt .company {
       width: 30%;
       margin: 40px 20px;
       height: 40px; } }
+
+      #logoQuilt .company.tiny {
+        display: none;
+      }
   @media (min-width: 486px) and (max-width: 992px) {
     #logoQuilt .company {
       width: 40%;
@@ -543,6 +558,12 @@ section {
 
 #logoQuilt .blind {
   background: url("../images/blind.png"); }
+
+#logoQuilt .spotify {
+background: url("../images/spotify-logo.svg"); }
+
+#logoQuilt .sonos {
+background: url("../images/sonos-logo.svg"); }
 
 #logoQuilt .aande {
   background: url("../images/aande.png");
@@ -701,7 +722,29 @@ section {
     #personal ul {
       width: auto;
       padding-left: 12px;
-      display: block; } }
+      display: block; } 
+
+    #projects .projectCategory {
+      /* display: block; */
+      display: none;
+      margin-left: 0;
+      text-align: left;
+      font-weight: 100;
+      opacity: 0.5;
+      position: relative;
+      margin-left: 0px;
+      margin-bottom: 0; }
+    #projects .projectCategory:before {
+      display: none;
+    }
+    .projectTile {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    .centerMobile {
+      text-align: center;
+    }
+    }
   #personal ul li {
     line-height: 2;
     list-style-type: none;
@@ -804,3 +847,7 @@ section {
       top: -10px; }
   #footer a {
     color: inherit; }
+.personalHeadings {
+  color: inherit;
+  letter-spacing: 0.5px;
+}
